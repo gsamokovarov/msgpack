@@ -2,13 +2,12 @@ package msgpack
 
 import (
 	"bytes"
-	"fmt"
 	"io"
 	"reflect"
 	"time"
 
 	"github.com/go-openapi/strfmt"
-	"github.com/mgechev/msgpack/codes"
+	"github.com/gsamokovarov/msgpack/codes"
 )
 
 type writer interface {
@@ -109,7 +108,6 @@ func (e *Encoder) encode(v interface{}) error {
 	case strfmt.DateTime:
 		return e.EncodeDateTime(v)
 	}
-	fmt.Println("##################### LALALALAAAAAAAAAAAAAAAAAAAAAAA", v)
 	return e.EncodeValue(reflect.ValueOf(v))
 }
 

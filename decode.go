@@ -11,7 +11,7 @@ import (
 
 	"github.com/go-openapi/strfmt"
 
-	"github.com/mgechev/msgpack/codes"
+	"github.com/gsamokovarov/msgpack/codes"
 )
 
 const bytesAllocLimit = 1024 * 1024 // 1mb
